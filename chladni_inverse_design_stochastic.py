@@ -11,7 +11,7 @@
 # ///
 #!/usr/bin/env python3
 """
-chladni_inverse_design.py
+chladni_inverse_design_stochastic.py
 
 Toy inverse design for time-averaged Chladni-like intensity fields on a
 simply-supported square plate.
@@ -33,7 +33,7 @@ This version supports basin-shaped objectives:
 
 Example:
 
-    uv run chladni_inverse_design.py mask.png \
+    uv run chladni_inverse_design_stochastic.py square.png \
         --w-max 80 \
         --size 128 \
         --blur 1.0 \
@@ -43,7 +43,7 @@ Example:
 
 PyTorch version:
 
-    uv run chladni_inverse_design.py mask.png \
+    uv run chladni_inverse_design_stochastic.py square.png \
         --w-max 120 \
         --size 128 \
         --boundary-margin 8 \

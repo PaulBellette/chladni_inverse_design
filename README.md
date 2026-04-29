@@ -10,11 +10,11 @@ Along this journey we get to ask the question Kac never asked:
 
 > Can one see a face in a plate via tactical squeaking?
 
-Spoiler: sort of, but the plate has opinions.
+Spoiler: sort of, kinda, but not really.
 
 ## What this repo does
 
-This is a toy inverse-design script for Chladni-ish energy fields on an idealised square plate. Given a binary target mask, it tries to find nonnegative modal weights such that a time-averaged energy field has low-energy valleys near the target strokes and higher energy away from them.
+This is am experimental inverse-design script for Chladni-ish energy fields on an idealised square plate. Given a binary target mask, it tries to find nonnegative modal weights such that a time-averaged energy field has low-energy valleys near the target strokes and higher energy away from them.
 
 The main script is:
 
@@ -115,11 +115,11 @@ E(x,y) = \sum_k b_k \phi_k(x,y)^2,
 \qquad b_k \ge 0.
 $$
 
-This is the crucial representational bias. It is a **nonnegative mixture of squared mode shapes**. That means no signed cancellation. It likes boxes, bands, grids, crosses, and big connected glyphs. It does not naturally enjoy tiny separated eyes, subtle smiles, or human aesthetic demands.
+This is the crucial representational bias. It is a **nonnegative mixture of squared mode shapes**. That means no signed cancellation. It likes boxes, bands, grids, crosses, and big connected glyphs. It does not naturally enjoy tiny separated eyes, subtle smiles, or other aesthetic demands.
 
 The plate is not wrong. We are just asking it to do graphic design with a xylophone.
 
-## From least squares to ML-flavoured pleading
+## From least squares to ML-flavoured pleading and bargining
 
 The first obvious objective was plain regression: make the predicted energy match a target energy image.
 
@@ -219,14 +219,14 @@ Refreshing every step is slower, so the hard-negative pool is cached and refresh
 
 ### 8. Stochastic batches and noisy init
 
-Full-batch optimisation plus symmetric initialisation tends to sit politely inside the symmetry of the square basis. Stochastic BCE batches and small random coefficient initialisation help jiggle it out of overly tidy solutions.
+Full-batch optimisation plus symmetric initialisation tends to sit politely inside the symmetry of the square basis. Stochastic BCE batches and small random coefficient initialisation help jiggle it out of overly tidy solutions while we pray for symmetry breaking.
 
 ```bash
 --bce-batch-size 2048
 --init-noise 0.05
 ```
 
-This is not magic. It just gives the optimiser permission to be a little less Victorian.
+This is not magic, it might not even do very much.
 
 ## Results
 
@@ -283,7 +283,7 @@ In other words, this project accidentally became a tiny parable about machine le
 - Sand transport is not simulated. The script designs a scalar energy field, not particle motion.
 - Multi-frequency time averaging destroys signed cancellation, so the representation is much weaker than arbitrary Fourier synthesis.
 - The boundary behaviour is weird because the toy basis forces zero energy at the boundary.
-- The optimisation is hacky by design. This is a weekend goblin, not a design standard.
+- The optimisation is hacky by design. This is a weekend distraction from real work goblin, not a design standard.
 
 ## Interesting next steps
 
