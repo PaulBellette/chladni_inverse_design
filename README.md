@@ -314,4 +314,5 @@ Some generated preview files are named `chlandi_*` rather than `chladni_*`. This
 
 ## Acknowledgement
 
-Initial prototyping and implementation iterations were developed collaboratively with ChatGPT (OpenAI), then adapted and organized into this repository by Paul Bellette. Let's face it, when I was a postdoc this kind of distraction would have taken me weeks or months of screwing around, with AI that has compressed to hours. If that isn't progress, I don't know what is.
+Initial prototyping and implementation iterations were developed collaboratively with ChatGPT (OpenAI), then adapted and organized into this repository by Paul Bellette. 
+Let's face it, when I was a postdoc this kind of distraction would have taken me weeks or months of screwing around, with AI that has compressed to hours. If that isn't progress, I don't know what is.
