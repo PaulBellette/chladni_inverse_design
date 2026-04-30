@@ -279,11 +279,11 @@ In other words, this project accidentally became a tiny parable about machine le
 
 ## Known limitations
 
-- The plate model is idealised and simply-supported. A real Chladni plate is often closer to a free or point-supported plate, with actuator coupling, damping, and other gremlins.
+- The plate model is idealised and simply-supported. A real Chladni plate is often closer to a free or point-supported plate, with actuator coupling, damping, etc, etc.
 - Sand transport is not simulated. The script designs a scalar energy field, not particle motion.
 - Multi-frequency time averaging destroys signed cancellation, so the representation is much weaker than arbitrary Fourier synthesis.
 - The boundary behaviour is weird because the toy basis forces zero energy at the boundary.
-- The optimisation is hacky by design. This is a weekend distraction from real work goblin, not a design standard.
+- The optimisation is hacky by design. This is a weekend distraction from real work, not a design standard.
 
 ## Interesting next steps
 
