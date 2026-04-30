@@ -14,7 +14,7 @@ Spoiler: sort of, kinda, but not really.
 
 ## What this repo does
 
-This is am experimental inverse-design script for Chladni-ish energy fields on an idealised square plate. Given a binary target mask, it tries to find nonnegative modal weights such that a time-averaged energy field has low-energy valleys near the target strokes and higher energy away from them.
+This is an experimental inverse-design script for Chladni-ish energy fields on an idealised square plate. Given a binary target mask, it tries to find nonnegative modal weights such that a time-averaged energy field has low-energy valleys near the target strokes and higher energy away from them.
 
 The main script is:
 
